@@ -9,6 +9,8 @@
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 
+<img width="1899" height="981" alt="image" src="https://github.com/user-attachments/assets/8e83d13f-8adf-439f-bf6a-8ba8401fec4a" />
+
 An end-to-end Machine Learning and Data Engineering pipeline built to detect and block mobile money fraud (SIM-swaps, Account Takeovers, Velocity attacks) in **under 200 milliseconds**.
 
 ##  The Problem
