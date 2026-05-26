@@ -1,0 +1,1062 @@
+[0m15:28:46.882831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010CBBE660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020109497610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010EABFC50>]}
+
+
+============================== 15:28:46.895300 | 8ffb67d8-f6e9-4fc2-89a2-7327cbfcf9e7 ==============================
+[0m15:28:46.895300 [info ] [MainThread]: Running with dbt=1.11.11
+[0m15:28:46.897041 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\Desktop\\mobile money fraud engine\\mpesa_analytics\\logs'}
+[0m15:28:47.587014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8ffb67d8-f6e9-4fc2-89a2-7327cbfcf9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010D1E5CD0>]}
+[0m15:28:47.762731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8ffb67d8-f6e9-4fc2-89a2-7327cbfcf9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010EAD3460>]}
+[0m15:28:47.765375 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m15:28:49.789332 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m15:28:49.791656 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m15:28:49.792857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '8ffb67d8-f6e9-4fc2-89a2-7327cbfcf9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010F348250>]}
+[0m15:28:52.492991 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.mpesa_analytics.example
+[0m15:28:52.501803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8ffb67d8-f6e9-4fc2-89a2-7327cbfcf9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010E732E40>]}
+[0m15:28:52.662854 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\manifest.json
+[0m15:28:52.672277 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\semantic_manifest.json
+[0m15:28:52.711542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8ffb67d8-f6e9-4fc2-89a2-7327cbfcf9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010F57DEF0>]}
+[0m15:28:52.712511 [info ] [MainThread]: Found 1 model, 475 macros
+[0m15:28:52.713509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8ffb67d8-f6e9-4fc2-89a2-7327cbfcf9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010F39C120>]}
+[0m15:28:52.717859 [info ] [MainThread]: 
+[0m15:28:52.718881 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:28:52.719938 [info ] [MainThread]: 
+[0m15:28:52.721560 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:28:52.724180 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mobile_money_profiles'
+[0m15:28:53.430844 [debug] [ThreadPool]: Using postgres connection "list_mobile_money_profiles"
+[0m15:28:53.432022 [debug] [ThreadPool]: On list_mobile_money_profiles: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "list_mobile_money_profiles"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:28:53.433021 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:28:53.854148 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.421 seconds
+[0m15:28:53.859208 [debug] [ThreadPool]: On list_mobile_money_profiles: Close
+[0m15:28:53.869470 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mobile_money_profiles_analytics_marts'
+[0m15:28:53.896075 [debug] [ThreadPool]: Using postgres connection "list_mobile_money_profiles_analytics_marts"
+[0m15:28:53.897485 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "list_mobile_money_profiles_analytics_marts"} */
+select
+      'mobile_money_profiles' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_marts'
+    union all
+    select
+      'mobile_money_profiles' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_marts'
+    union all
+    select
+      'mobile_money_profiles' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_marts'
+  
+[0m15:28:53.898761 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:28:54.061743 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.163 seconds
+[0m15:28:54.066614 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: ROLLBACK
+[0m15:28:54.069685 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: Close
+[0m15:28:54.085803 [debug] [MainThread]: Using postgres connection "master"
+[0m15:28:54.087352 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m15:28:54.089180 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:28:54.288982 [debug] [MainThread]: SQL status: SELECT 0 in 0.200 seconds
+[0m15:28:54.295643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8ffb67d8-f6e9-4fc2-89a2-7327cbfcf9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010FCCC7D0>]}
+[0m15:28:54.297572 [debug] [MainThread]: On master: ROLLBACK
+[0m15:28:54.301505 [debug] [MainThread]: On master: COMMIT
+[0m15:28:54.303039 [debug] [MainThread]: Using postgres connection "master"
+[0m15:28:54.304373 [debug] [MainThread]: On master: COMMIT
+[0m15:28:54.309764 [debug] [MainThread]: SQL status: COMMIT in 0.004 seconds
+[0m15:28:54.311450 [debug] [MainThread]: On master: Close
+[0m15:28:54.343617 [debug] [Thread-1 (]: Began running node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:28:54.345876 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics_marts.mart_daily_fraud_metrics .......... [RUN]
+[0m15:28:54.349565 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_mobile_money_profiles, now model.mpesa_analytics.mart_daily_fraud_metrics)
+[0m15:28:54.351484 [debug] [Thread-1 (]: Began compiling node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:28:54.382729 [debug] [Thread-1 (]: Writing injected SQL for node "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:28:54.396077 [debug] [Thread-1 (]: Began executing node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:28:54.668889 [debug] [Thread-1 (]: Writing runtime sql for node "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:28:54.681946 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:28:54.685471 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "node_id": "model.mpesa_analytics.mart_daily_fraud_metrics"} */
+
+  
+    
+
+  create  table "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH raw_transactions AS (
+    -- 1. Extract the raw data from the operational table
+    SELECT * FROM public.processed_transactions
+),
+
+daily_aggregates AS (
+    -- 2. Transform the data into daily business metrics
+    SELECT 
+        DATE(created_at) AS report_date,
+        COUNT(txn_id) AS total_transactions,
+        SUM(amount) AS total_volume_kes,
+        
+        -- Business Logic: Isolate the fraud attempts
+        COUNT(CASE WHEN is_fraud = true THEN txn_id END) AS fraud_attempts,
+        SUM(CASE WHEN is_fraud = true THEN amount ELSE 0 END) AS amount_saved_by_ml_kes
+
+    FROM raw_transactions
+    GROUP BY 1
+)
+
+-- 3. Final Output with calculated ratios
+SELECT 
+    report_date,
+    total_transactions,
+    total_volume_kes,
+    fraud_attempts,
+    amount_saved_by_ml_kes,
+    ROUND((fraud_attempts::numeric / NULLIF(total_transactions, 0)) * 100, 2) AS fraud_attempt_rate_pct
+FROM daily_aggregates
+ORDER BY report_date DESC
+  );
+  
+[0m15:28:54.689896 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:28:55.045518 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "public.processed_transactions" does not exist
+LINE 16:     SELECT * FROM public.processed_transactions
+                           ^
+
+[0m15:28:55.047321 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: ROLLBACK
+[0m15:28:55.052516 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: Close
+[0m15:28:55.629195 [debug] [Thread-1 (]: Database Error in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)
+  relation "public.processed_transactions" does not exist
+  LINE 16:     SELECT * FROM public.processed_transactions
+                             ^
+  compiled code at target\run\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql
+[0m15:28:55.635713 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8ffb67d8-f6e9-4fc2-89a2-7327cbfcf9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010FA93540>]}
+[0m15:28:55.637554 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model analytics_marts.mart_daily_fraud_metrics . [[31mERROR[0m in 1.28s]
+[0m15:28:55.641552 [debug] [Thread-1 (]: Finished running node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:28:55.643312 [debug] [Thread-7 (]: Marking all children of 'model.mpesa_analytics.mart_daily_fraud_metrics' to be skipped because of status 'error'.  Reason: Database Error in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)
+  relation "public.processed_transactions" does not exist
+  LINE 16:     SELECT * FROM public.processed_transactions
+                             ^
+  compiled code at target\run\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql.
+[0m15:28:55.650224 [debug] [MainThread]: On master: COMMIT
+[0m15:28:55.651139 [debug] [MainThread]: Using postgres connection "master"
+[0m15:28:55.651849 [debug] [MainThread]: On master: COMMIT
+[0m15:28:55.652524 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:28:55.702246 [debug] [MainThread]: SQL status: COMMIT in 0.050 seconds
+[0m15:28:55.703457 [debug] [MainThread]: On master: Close
+[0m15:28:55.704811 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:28:55.706171 [debug] [MainThread]: Connection 'model.mpesa_analytics.mart_daily_fraud_metrics' was properly closed.
+[0m15:28:55.707285 [debug] [MainThread]: Connection 'list_mobile_money_profiles_analytics_marts' was properly closed.
+[0m15:28:55.708631 [info ] [MainThread]: 
+[0m15:28:55.710043 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 2.99 seconds (2.99s).
+[0m15:28:55.712456 [debug] [MainThread]: Command end result
+[0m15:28:55.885724 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\manifest.json
+[0m15:28:56.067930 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\semantic_manifest.json
+[0m15:28:56.158130 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\run_results.json
+[0m15:28:56.159498 [info ] [MainThread]: 
+[0m15:28:56.161126 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:28:56.162836 [info ] [MainThread]: 
+[0m15:28:56.165878 [error] [MainThread]: [31mFailure in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)[0m
+[0m15:28:56.168452 [error] [MainThread]:   Database Error in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)
+  relation "public.processed_transactions" does not exist
+  LINE 16:     SELECT * FROM public.processed_transactions
+                             ^
+  compiled code at target\run\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql
+[0m15:28:56.170835 [info ] [MainThread]: 
+[0m15:28:56.174205 [info ] [MainThread]:   compiled code at target\compiled\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql
+[0m15:28:56.175909 [info ] [MainThread]: 
+[0m15:28:56.177515 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:28:56.183062 [debug] [MainThread]: Command `dbt run` failed at 15:28:56.182622 after 9.76 seconds
+[0m15:28:56.184325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010FA83B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010FC56960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002010F4CCFD0>]}
+[0m15:28:56.185674 [debug] [MainThread]: Flushing usage events
+[0m15:28:58.826724 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:29:34.349920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933BEAA660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029338697610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933DCBFC50>]}
+
+
+============================== 15:29:34.373778 | 4e77cc10-cc80-40eb-841b-48d72aea092a ==============================
+[0m15:29:34.373778 [info ] [MainThread]: Running with dbt=1.11.11
+[0m15:29:34.381397 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\Desktop\\mobile money fraud engine\\mpesa_analytics\\logs'}
+[0m15:29:35.186570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4e77cc10-cc80-40eb-841b-48d72aea092a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933C3E5CD0>]}
+[0m15:29:35.432108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4e77cc10-cc80-40eb-841b-48d72aea092a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933DCD3460>]}
+[0m15:29:35.435328 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m15:29:38.548159 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m15:29:39.137870 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:29:39.138753 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:29:39.139791 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:29:39.160931 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.mpesa_analytics.example
+[0m15:29:39.285785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4e77cc10-cc80-40eb-841b-48d72aea092a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933E550B50>]}
+[0m15:29:39.539811 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\manifest.json
+[0m15:29:39.551154 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\semantic_manifest.json
+[0m15:29:39.597235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4e77cc10-cc80-40eb-841b-48d72aea092a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933DCC9E50>]}
+[0m15:29:39.599334 [info ] [MainThread]: Found 1 model, 475 macros
+[0m15:29:39.600656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4e77cc10-cc80-40eb-841b-48d72aea092a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933E976C10>]}
+[0m15:29:39.604433 [info ] [MainThread]: 
+[0m15:29:39.605652 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:29:39.607165 [info ] [MainThread]: 
+[0m15:29:39.608916 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:29:39.613777 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mobile_money_profiles'
+[0m15:29:40.440107 [debug] [ThreadPool]: Using postgres connection "list_mobile_money_profiles"
+[0m15:29:40.441597 [debug] [ThreadPool]: On list_mobile_money_profiles: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "list_mobile_money_profiles"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:29:40.442736 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:29:40.601059 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.158 seconds
+[0m15:29:40.606109 [debug] [ThreadPool]: On list_mobile_money_profiles: Close
+[0m15:29:40.612103 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mobile_money_profiles_analytics_marts'
+[0m15:29:40.636720 [debug] [ThreadPool]: Using postgres connection "list_mobile_money_profiles_analytics_marts"
+[0m15:29:40.637850 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "list_mobile_money_profiles_analytics_marts"} */
+select
+      'mobile_money_profiles' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_marts'
+    union all
+    select
+      'mobile_money_profiles' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_marts'
+    union all
+    select
+      'mobile_money_profiles' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_marts'
+  
+[0m15:29:40.638739 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:29:40.721914 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.083 seconds
+[0m15:29:40.726309 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: ROLLBACK
+[0m15:29:40.731406 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: Close
+[0m15:29:40.749271 [debug] [MainThread]: Using postgres connection "master"
+[0m15:29:40.750862 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m15:29:40.752823 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:29:40.882585 [debug] [MainThread]: SQL status: SELECT 0 in 0.130 seconds
+[0m15:29:40.887704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4e77cc10-cc80-40eb-841b-48d72aea092a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933EABB930>]}
+[0m15:29:40.889814 [debug] [MainThread]: On master: ROLLBACK
+[0m15:29:40.893597 [debug] [MainThread]: On master: COMMIT
+[0m15:29:40.896428 [debug] [MainThread]: Using postgres connection "master"
+[0m15:29:40.898361 [debug] [MainThread]: On master: COMMIT
+[0m15:29:40.904380 [debug] [MainThread]: SQL status: COMMIT in 0.004 seconds
+[0m15:29:40.905970 [debug] [MainThread]: On master: Close
+[0m15:29:40.953459 [debug] [Thread-1 (]: Began running node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:29:40.955829 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics_marts.mart_daily_fraud_metrics .......... [RUN]
+[0m15:29:40.957840 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.mpesa_analytics.mart_daily_fraud_metrics'
+[0m15:29:40.958968 [debug] [Thread-1 (]: Began compiling node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:29:40.984286 [debug] [Thread-1 (]: Writing injected SQL for node "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:29:40.988638 [debug] [Thread-1 (]: Began executing node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:29:41.218565 [debug] [Thread-1 (]: Writing runtime sql for node "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:29:41.225723 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:29:41.230408 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "node_id": "model.mpesa_analytics.mart_daily_fraud_metrics"} */
+
+  
+    
+
+  create  table "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH raw_transactions AS (
+    -- 1. Extract the raw data from the operational table
+    SELECT * FROM public.processed_transactions
+),
+
+daily_aggregates AS (
+    -- 2. Transform the data into daily business metrics
+    SELECT 
+        DATE(created_at) AS report_date,
+        COUNT(txn_id) AS total_transactions,
+        SUM(amount) AS total_volume_kes,
+        
+        -- Business Logic: Isolate the fraud attempts
+        COUNT(CASE WHEN is_fraud = true THEN txn_id END) AS fraud_attempts,
+        SUM(CASE WHEN is_fraud = true THEN amount ELSE 0 END) AS amount_saved_by_ml_kes
+
+    FROM raw_transactions
+    GROUP BY 1
+)
+
+-- 3. Final Output with calculated ratios
+SELECT 
+    report_date,
+    total_transactions,
+    total_volume_kes,
+    fraud_attempts,
+    amount_saved_by_ml_kes,
+    ROUND((fraud_attempts::numeric / NULLIF(total_transactions, 0)) * 100, 2) AS fraud_attempt_rate_pct
+FROM daily_aggregates
+ORDER BY report_date DESC
+  );
+  
+[0m15:29:41.233747 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:29:41.316236 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "public.processed_transactions" does not exist
+LINE 16:     SELECT * FROM public.processed_transactions
+                           ^
+
+[0m15:29:41.318295 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: ROLLBACK
+[0m15:29:41.321951 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: Close
+[0m15:29:41.541485 [debug] [Thread-1 (]: Database Error in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)
+  relation "public.processed_transactions" does not exist
+  LINE 16:     SELECT * FROM public.processed_transactions
+                             ^
+  compiled code at target\run\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql
+[0m15:29:41.547765 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4e77cc10-cc80-40eb-841b-48d72aea092a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933E949790>]}
+[0m15:29:41.549607 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model analytics_marts.mart_daily_fraud_metrics . [[31mERROR[0m in 0.59s]
+[0m15:29:41.552708 [debug] [Thread-1 (]: Finished running node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:29:41.554337 [debug] [Thread-7 (]: Marking all children of 'model.mpesa_analytics.mart_daily_fraud_metrics' to be skipped because of status 'error'.  Reason: Database Error in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)
+  relation "public.processed_transactions" does not exist
+  LINE 16:     SELECT * FROM public.processed_transactions
+                             ^
+  compiled code at target\run\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql.
+[0m15:29:41.560050 [debug] [MainThread]: On master: COMMIT
+[0m15:29:41.561721 [debug] [MainThread]: Using postgres connection "master"
+[0m15:29:41.562935 [debug] [MainThread]: On master: COMMIT
+[0m15:29:41.564416 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:29:41.628740 [debug] [MainThread]: SQL status: COMMIT in 0.064 seconds
+[0m15:29:41.631443 [debug] [MainThread]: On master: Close
+[0m15:29:41.634117 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:29:41.635503 [debug] [MainThread]: Connection 'list_mobile_money_profiles' was properly closed.
+[0m15:29:41.636957 [debug] [MainThread]: Connection 'list_mobile_money_profiles_analytics_marts' was properly closed.
+[0m15:29:41.638127 [debug] [MainThread]: Connection 'model.mpesa_analytics.mart_daily_fraud_metrics' was properly closed.
+[0m15:29:41.639484 [info ] [MainThread]: 
+[0m15:29:41.708832 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 2.03 seconds (2.03s).
+[0m15:29:41.748159 [debug] [MainThread]: Command end result
+[0m15:29:42.345067 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\manifest.json
+[0m15:29:42.377904 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\semantic_manifest.json
+[0m15:29:42.431185 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\run_results.json
+[0m15:29:42.432458 [info ] [MainThread]: 
+[0m15:29:42.434395 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:29:42.438185 [info ] [MainThread]: 
+[0m15:29:42.459682 [error] [MainThread]: [31mFailure in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)[0m
+[0m15:29:42.472218 [error] [MainThread]:   Database Error in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)
+  relation "public.processed_transactions" does not exist
+  LINE 16:     SELECT * FROM public.processed_transactions
+                             ^
+  compiled code at target\run\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql
+[0m15:29:42.475718 [info ] [MainThread]: 
+[0m15:29:42.485303 [info ] [MainThread]:   compiled code at target\compiled\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql
+[0m15:29:42.488243 [info ] [MainThread]: 
+[0m15:29:42.490996 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:29:42.510094 [debug] [MainThread]: Command `dbt run` failed at 15:29:42.509578 after 8.81 seconds
+[0m15:29:42.511716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933ECA8520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933E0DF4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002933E0DF430>]}
+[0m15:29:42.513565 [debug] [MainThread]: Flushing usage events
+[0m15:29:44.740468 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:33:30.719975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C06BE660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223BCB97610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C21BFC50>]}
+
+
+============================== 15:33:30.738924 | d846c4de-3087-4615-824f-574fe57f6a9a ==============================
+[0m15:33:30.738924 [info ] [MainThread]: Running with dbt=1.11.11
+[0m15:33:30.742256 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\Desktop\\mobile money fraud engine\\mpesa_analytics\\logs'}
+[0m15:33:32.410407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd846c4de-3087-4615-824f-574fe57f6a9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C0CE5CD0>]}
+[0m15:33:32.803593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd846c4de-3087-4615-824f-574fe57f6a9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C21D3460>]}
+[0m15:33:32.808910 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m15:33:37.405708 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m15:33:38.383842 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:33:38.384906 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:33:38.385785 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:33:38.403560 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.mpesa_analytics.example
+[0m15:33:38.484950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd846c4de-3087-4615-824f-574fe57f6a9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C2C4CB50>]}
+[0m15:33:38.791917 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\manifest.json
+[0m15:33:38.801733 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\semantic_manifest.json
+[0m15:33:38.847962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd846c4de-3087-4615-824f-574fe57f6a9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C21CDE50>]}
+[0m15:33:38.849816 [info ] [MainThread]: Found 1 model, 475 macros
+[0m15:33:38.851985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd846c4de-3087-4615-824f-574fe57f6a9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C3072C10>]}
+[0m15:33:38.858000 [info ] [MainThread]: 
+[0m15:33:38.859396 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:33:38.862206 [info ] [MainThread]: 
+[0m15:33:38.864476 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:33:38.868285 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mobile_money_profiles'
+[0m15:33:39.614841 [debug] [ThreadPool]: Using postgres connection "list_mobile_money_profiles"
+[0m15:33:39.616064 [debug] [ThreadPool]: On list_mobile_money_profiles: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "list_mobile_money_profiles"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:33:39.616924 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:33:40.289590 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.672 seconds
+[0m15:33:40.295024 [debug] [ThreadPool]: On list_mobile_money_profiles: Close
+[0m15:33:40.316142 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mobile_money_profiles_analytics_marts'
+[0m15:33:40.348906 [debug] [ThreadPool]: Using postgres connection "list_mobile_money_profiles_analytics_marts"
+[0m15:33:40.350587 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "list_mobile_money_profiles_analytics_marts"} */
+select
+      'mobile_money_profiles' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_marts'
+    union all
+    select
+      'mobile_money_profiles' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_marts'
+    union all
+    select
+      'mobile_money_profiles' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_marts'
+  
+[0m15:33:40.366328 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:33:40.643569 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.283 seconds
+[0m15:33:40.650819 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: ROLLBACK
+[0m15:33:40.655125 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: Close
+[0m15:33:40.681148 [debug] [MainThread]: Using postgres connection "master"
+[0m15:33:40.683505 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m15:33:40.687376 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:33:40.926609 [debug] [MainThread]: SQL status: SELECT 0 in 0.239 seconds
+[0m15:33:40.932571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd846c4de-3087-4615-824f-574fe57f6a9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C31C7930>]}
+[0m15:33:40.934505 [debug] [MainThread]: On master: ROLLBACK
+[0m15:33:40.937630 [debug] [MainThread]: On master: COMMIT
+[0m15:33:40.939520 [debug] [MainThread]: Using postgres connection "master"
+[0m15:33:40.941499 [debug] [MainThread]: On master: COMMIT
+[0m15:33:40.946224 [debug] [MainThread]: SQL status: COMMIT in 0.003 seconds
+[0m15:33:40.948606 [debug] [MainThread]: On master: Close
+[0m15:33:41.521339 [debug] [Thread-1 (]: Began running node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:33:41.523607 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics_marts.mart_daily_fraud_metrics .......... [RUN]
+[0m15:33:41.526853 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.mpesa_analytics.mart_daily_fraud_metrics'
+[0m15:33:41.530083 [debug] [Thread-1 (]: Began compiling node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:33:41.564181 [debug] [Thread-1 (]: Writing injected SQL for node "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:33:41.625511 [debug] [Thread-1 (]: Began executing node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:33:41.824699 [debug] [Thread-1 (]: Writing runtime sql for node "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:33:41.836115 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:33:41.839409 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "node_id": "model.mpesa_analytics.mart_daily_fraud_metrics"} */
+
+  
+    
+
+  create  table "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH raw_transactions AS (
+    -- 1. Extract the raw data from the operational table
+    SELECT * FROM public.processed_transactions
+),
+
+daily_aggregates AS (
+    -- 2. Transform the data into daily business metrics
+    SELECT 
+        DATE(created_at) AS report_date,
+        COUNT(txn_id) AS total_transactions,
+        SUM(amount) AS total_volume_kes,
+        
+        -- Business Logic: Isolate the fraud attempts
+        COUNT(CASE WHEN is_fraud = true THEN txn_id END) AS fraud_attempts,
+        SUM(CASE WHEN is_fraud = true THEN amount ELSE 0 END) AS amount_saved_by_ml_kes
+
+    FROM raw_transactions
+    GROUP BY 1
+)
+
+-- 3. Final Output with calculated ratios
+SELECT 
+    report_date,
+    total_transactions,
+    total_volume_kes,
+    fraud_attempts,
+    amount_saved_by_ml_kes,
+    ROUND((fraud_attempts::numeric / NULLIF(total_transactions, 0)) * 100, 2) AS fraud_attempt_rate_pct
+FROM daily_aggregates
+ORDER BY report_date DESC
+  );
+  
+[0m15:33:41.844944 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:33:41.975584 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "public.processed_transactions" does not exist
+LINE 16:     SELECT * FROM public.processed_transactions
+                           ^
+
+[0m15:33:41.977694 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: ROLLBACK
+[0m15:33:41.982082 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: Close
+[0m15:33:42.042721 [debug] [Thread-1 (]: Database Error in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)
+  relation "public.processed_transactions" does not exist
+  LINE 16:     SELECT * FROM public.processed_transactions
+                             ^
+  compiled code at target\run\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql
+[0m15:33:42.201275 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd846c4de-3087-4615-824f-574fe57f6a9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C30DD790>]}
+[0m15:33:42.206081 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model analytics_marts.mart_daily_fraud_metrics . [[31mERROR[0m in 0.52s]
+[0m15:33:42.212371 [debug] [Thread-1 (]: Finished running node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:33:42.219297 [debug] [Thread-7 (]: Marking all children of 'model.mpesa_analytics.mart_daily_fraud_metrics' to be skipped because of status 'error'.  Reason: Database Error in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)
+  relation "public.processed_transactions" does not exist
+  LINE 16:     SELECT * FROM public.processed_transactions
+                             ^
+  compiled code at target\run\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql.
+[0m15:33:42.238911 [debug] [MainThread]: On master: COMMIT
+[0m15:33:42.242061 [debug] [MainThread]: Using postgres connection "master"
+[0m15:33:42.244544 [debug] [MainThread]: On master: COMMIT
+[0m15:33:42.246031 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:33:42.572272 [debug] [MainThread]: SQL status: COMMIT in 0.326 seconds
+[0m15:33:42.573926 [debug] [MainThread]: On master: Close
+[0m15:33:42.576332 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:33:42.577934 [debug] [MainThread]: Connection 'list_mobile_money_profiles' was properly closed.
+[0m15:33:42.579848 [debug] [MainThread]: Connection 'list_mobile_money_profiles_analytics_marts' was properly closed.
+[0m15:33:42.581216 [debug] [MainThread]: Connection 'model.mpesa_analytics.mart_daily_fraud_metrics' was properly closed.
+[0m15:33:42.582588 [info ] [MainThread]: 
+[0m15:33:42.585454 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 3.72 seconds (3.72s).
+[0m15:33:42.591865 [debug] [MainThread]: Command end result
+[0m15:33:42.966426 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\manifest.json
+[0m15:33:43.110052 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\semantic_manifest.json
+[0m15:33:43.392153 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\run_results.json
+[0m15:33:43.397246 [info ] [MainThread]: 
+[0m15:33:43.413354 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:33:43.416436 [info ] [MainThread]: 
+[0m15:33:43.421310 [error] [MainThread]: [31mFailure in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)[0m
+[0m15:33:43.425004 [error] [MainThread]:   Database Error in model mart_daily_fraud_metrics (models\marts\mart_daily_fraud_metrics.sql)
+  relation "public.processed_transactions" does not exist
+  LINE 16:     SELECT * FROM public.processed_transactions
+                             ^
+  compiled code at target\run\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql
+[0m15:33:43.431008 [info ] [MainThread]: 
+[0m15:33:43.437497 [info ] [MainThread]:   compiled code at target\compiled\mpesa_analytics\models\marts\mart_daily_fraud_metrics.sql
+[0m15:33:43.443503 [info ] [MainThread]: 
+[0m15:33:43.457848 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:33:43.511308 [debug] [MainThread]: Command `dbt run` failed at 15:33:43.507066 after 13.51 seconds
+[0m15:33:43.513879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C33A8520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C27DF4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C27DF430>]}
+[0m15:33:43.517768 [debug] [MainThread]: Flushing usage events
+[0m15:33:46.775032 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:37:53.799005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179BEAE660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021798697610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179DCBBC50>]}
+
+
+============================== 15:37:53.813936 | f7b591fe-253c-4aae-b029-34fee910dab5 ==============================
+[0m15:37:53.813936 [info ] [MainThread]: Running with dbt=1.11.11
+[0m15:37:53.815260 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\Desktop\\mobile money fraud engine\\mpesa_analytics\\logs'}
+[0m15:37:54.417542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f7b591fe-253c-4aae-b029-34fee910dab5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179C3E5CD0>]}
+[0m15:37:54.616115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f7b591fe-253c-4aae-b029-34fee910dab5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179DCD3460>]}
+[0m15:37:54.691372 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m15:37:56.208801 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m15:37:56.810145 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:37:56.810779 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:37:56.811248 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:37:56.820377 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.mpesa_analytics.example
+[0m15:37:56.864390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f7b591fe-253c-4aae-b029-34fee910dab5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179E548B50>]}
+[0m15:37:57.138002 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\manifest.json
+[0m15:37:57.145661 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\semantic_manifest.json
+[0m15:37:57.174842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f7b591fe-253c-4aae-b029-34fee910dab5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179DCC9E50>]}
+[0m15:37:57.175625 [info ] [MainThread]: Found 1 model, 475 macros
+[0m15:37:57.176492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f7b591fe-253c-4aae-b029-34fee910dab5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179E976C10>]}
+[0m15:37:57.179919 [info ] [MainThread]: 
+[0m15:37:57.180928 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:37:57.181839 [info ] [MainThread]: 
+[0m15:37:57.183303 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:37:57.185583 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mobile_money_profiles'
+[0m15:37:57.571463 [debug] [ThreadPool]: Using postgres connection "list_mobile_money_profiles"
+[0m15:37:57.572517 [debug] [ThreadPool]: On list_mobile_money_profiles: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "list_mobile_money_profiles"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:37:57.573564 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:37:57.646481 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.073 seconds
+[0m15:37:57.648775 [debug] [ThreadPool]: On list_mobile_money_profiles: Close
+[0m15:37:57.652205 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mobile_money_profiles_analytics_marts'
+[0m15:37:57.661908 [debug] [ThreadPool]: Using postgres connection "list_mobile_money_profiles_analytics_marts"
+[0m15:37:57.662674 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "list_mobile_money_profiles_analytics_marts"} */
+select
+      'mobile_money_profiles' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_marts'
+    union all
+    select
+      'mobile_money_profiles' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_marts'
+    union all
+    select
+      'mobile_money_profiles' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_marts'
+  
+[0m15:37:57.663260 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:37:57.736780 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.073 seconds
+[0m15:37:57.739152 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: ROLLBACK
+[0m15:37:57.740926 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: Close
+[0m15:37:57.750041 [debug] [MainThread]: Using postgres connection "master"
+[0m15:37:57.751178 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m15:37:57.752181 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:37:57.806706 [debug] [MainThread]: SQL status: SELECT 0 in 0.054 seconds
+[0m15:37:57.808853 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f7b591fe-253c-4aae-b029-34fee910dab5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179EABF930>]}
+[0m15:37:57.809654 [debug] [MainThread]: On master: ROLLBACK
+[0m15:37:57.811443 [debug] [MainThread]: On master: COMMIT
+[0m15:37:57.812035 [debug] [MainThread]: Using postgres connection "master"
+[0m15:37:57.812562 [debug] [MainThread]: On master: COMMIT
+[0m15:37:57.815164 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m15:37:57.815807 [debug] [MainThread]: On master: Close
+[0m15:37:57.828974 [debug] [Thread-1 (]: Began running node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:37:57.829969 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics_marts.mart_daily_fraud_metrics .......... [RUN]
+[0m15:37:57.831119 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.mpesa_analytics.mart_daily_fraud_metrics'
+[0m15:37:57.831755 [debug] [Thread-1 (]: Began compiling node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:37:57.847903 [debug] [Thread-1 (]: Writing injected SQL for node "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:37:57.851667 [debug] [Thread-1 (]: Began executing node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:37:57.925238 [debug] [Thread-1 (]: Writing runtime sql for node "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:37:57.927265 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:37:57.928044 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "node_id": "model.mpesa_analytics.mart_daily_fraud_metrics"} */
+
+  
+    
+
+  create  table "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH raw_transactions AS (
+    -- 1. Extract the raw data from the operational table
+    SELECT * FROM public.processed_transactions
+),
+
+daily_aggregates AS (
+    -- 2. Transform the data into daily business metrics
+    SELECT 
+        DATE(created_at) AS report_date,
+        COUNT(txn_id) AS total_transactions,
+        SUM(amount) AS total_volume_kes,
+        
+        -- Business Logic: Isolate the fraud attempts
+        COUNT(CASE WHEN is_fraud = true THEN txn_id END) AS fraud_attempts,
+        SUM(CASE WHEN is_fraud = true THEN amount ELSE 0 END) AS amount_saved_by_ml_kes
+
+    FROM raw_transactions
+    GROUP BY 1
+)
+
+-- 3. Final Output with calculated ratios
+SELECT 
+    report_date,
+    total_transactions,
+    total_volume_kes,
+    fraud_attempts,
+    amount_saved_by_ml_kes,
+    ROUND((fraud_attempts::numeric / NULLIF(total_transactions, 0)) * 100, 2) AS fraud_attempt_rate_pct
+FROM daily_aggregates
+ORDER BY report_date DESC
+  );
+  
+[0m15:37:57.928746 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:37:58.019740 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.091 seconds
+[0m15:37:58.036104 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:37:58.037395 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "node_id": "model.mpesa_analytics.mart_daily_fraud_metrics"} */
+alter table "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_tmp" rename to "mart_daily_fraud_metrics"
+[0m15:37:58.043738 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m15:37:58.078289 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: COMMIT
+[0m15:37:58.079063 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:37:58.079717 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: COMMIT
+[0m15:37:58.082869 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m15:37:58.093775 [debug] [Thread-1 (]: Applying DROP to: "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_backup"
+[0m15:37:58.102371 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:37:58.103216 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "node_id": "model.mpesa_analytics.mart_daily_fraud_metrics"} */
+drop table if exists "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_backup" cascade
+[0m15:37:58.107640 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m15:37:58.111723 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: Close
+[0m15:37:58.116826 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f7b591fe-253c-4aae-b029-34fee910dab5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179E949610>]}
+[0m15:37:58.118604 [info ] [Thread-1 (]: 1 of 1 OK created sql table model analytics_marts.mart_daily_fraud_metrics ..... [[32mSELECT 1[0m in 0.28s]
+[0m15:37:58.120008 [debug] [Thread-1 (]: Finished running node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:37:58.122641 [debug] [MainThread]: On master: COMMIT
+[0m15:37:58.123299 [debug] [MainThread]: Using postgres connection "master"
+[0m15:37:58.123849 [debug] [MainThread]: On master: COMMIT
+[0m15:37:58.124372 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:37:58.166002 [debug] [MainThread]: SQL status: COMMIT in 0.042 seconds
+[0m15:37:58.166809 [debug] [MainThread]: On master: Close
+[0m15:37:58.168273 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:37:58.169169 [debug] [MainThread]: Connection 'list_mobile_money_profiles' was properly closed.
+[0m15:37:58.169971 [debug] [MainThread]: Connection 'list_mobile_money_profiles_analytics_marts' was properly closed.
+[0m15:37:58.170707 [debug] [MainThread]: Connection 'model.mpesa_analytics.mart_daily_fraud_metrics' was properly closed.
+[0m15:37:58.171545 [info ] [MainThread]: 
+[0m15:37:58.172697 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.99 seconds (0.99s).
+[0m15:37:58.174531 [debug] [MainThread]: Command end result
+[0m15:37:58.242747 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\manifest.json
+[0m15:37:58.251054 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\semantic_manifest.json
+[0m15:37:58.272943 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\run_results.json
+[0m15:37:58.274238 [info ] [MainThread]: 
+[0m15:37:58.275835 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:37:58.277017 [info ] [MainThread]: 
+[0m15:37:58.278279 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:37:58.282486 [debug] [MainThread]: Command `dbt run` succeeded at 15:37:58.282113 after 5.04 seconds
+[0m15:37:58.283646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179ECA0730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179E0537F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002179E0539D0>]}
+[0m15:37:58.284730 [debug] [MainThread]: Flushing usage events
+[0m15:37:59.903818 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:43:59.862837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D37BB2660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D33F97610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D395BF9D0>]}
+
+
+============================== 15:43:59.890335 | 4868df9b-03ea-4898-9381-4a9cd560be84 ==============================
+[0m15:43:59.890335 [info ] [MainThread]: Running with dbt=1.11.11
+[0m15:43:59.892962 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\Desktop\\mobile money fraud engine\\mpesa_analytics\\logs'}
+[0m15:44:02.310291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4868df9b-03ea-4898-9381-4a9cd560be84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D380E9CD0>]}
+[0m15:44:03.016178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4868df9b-03ea-4898-9381-4a9cd560be84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D395DF460>]}
+[0m15:44:03.037145 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m15:44:06.485601 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m15:44:06.998183 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:44:06.999148 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:44:07.000169 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:44:07.016215 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.mpesa_analytics.example
+[0m15:44:07.085528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4868df9b-03ea-4898-9381-4a9cd560be84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D3A150B50>]}
+[0m15:44:07.299323 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\manifest.json
+[0m15:44:07.309221 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\semantic_manifest.json
+[0m15:44:07.353388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4868df9b-03ea-4898-9381-4a9cd560be84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D395D1E50>]}
+[0m15:44:07.354345 [info ] [MainThread]: Found 1 model, 475 macros
+[0m15:44:07.355381 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4868df9b-03ea-4898-9381-4a9cd560be84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D3A57EC10>]}
+[0m15:44:07.358748 [info ] [MainThread]: 
+[0m15:44:07.360069 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:44:07.362507 [info ] [MainThread]: 
+[0m15:44:07.364916 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:44:07.367732 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mobile_money_profiles'
+[0m15:44:08.547086 [debug] [ThreadPool]: Using postgres connection "list_mobile_money_profiles"
+[0m15:44:08.549196 [debug] [ThreadPool]: On list_mobile_money_profiles: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "list_mobile_money_profiles"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:44:08.551309 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:44:08.916926 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.366 seconds
+[0m15:44:08.922801 [debug] [ThreadPool]: On list_mobile_money_profiles: Close
+[0m15:44:08.936772 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mobile_money_profiles_analytics_marts'
+[0m15:44:08.971460 [debug] [ThreadPool]: Using postgres connection "list_mobile_money_profiles_analytics_marts"
+[0m15:44:08.973714 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "list_mobile_money_profiles_analytics_marts"} */
+select
+      'mobile_money_profiles' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_marts'
+    union all
+    select
+      'mobile_money_profiles' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_marts'
+    union all
+    select
+      'mobile_money_profiles' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_marts'
+  
+[0m15:44:08.975804 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:44:09.116547 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.141 seconds
+[0m15:44:09.122317 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: ROLLBACK
+[0m15:44:09.125736 [debug] [ThreadPool]: On list_mobile_money_profiles_analytics_marts: Close
+[0m15:44:09.148021 [debug] [MainThread]: Using postgres connection "master"
+[0m15:44:09.150044 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m15:44:09.151841 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:44:09.258314 [debug] [MainThread]: SQL status: SELECT 0 in 0.106 seconds
+[0m15:44:09.262235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4868df9b-03ea-4898-9381-4a9cd560be84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D3A6DB930>]}
+[0m15:44:09.263817 [debug] [MainThread]: On master: ROLLBACK
+[0m15:44:09.266260 [debug] [MainThread]: On master: COMMIT
+[0m15:44:09.267318 [debug] [MainThread]: Using postgres connection "master"
+[0m15:44:09.268136 [debug] [MainThread]: On master: COMMIT
+[0m15:44:09.271393 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m15:44:09.272474 [debug] [MainThread]: On master: Close
+[0m15:44:09.296864 [debug] [Thread-1 (]: Began running node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:44:09.298997 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics_marts.mart_daily_fraud_metrics .......... [RUN]
+[0m15:44:09.301629 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.mpesa_analytics.mart_daily_fraud_metrics'
+[0m15:44:09.303786 [debug] [Thread-1 (]: Began compiling node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:44:09.336395 [debug] [Thread-1 (]: Writing injected SQL for node "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:44:09.346061 [debug] [Thread-1 (]: Began executing node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:44:09.490137 [debug] [Thread-1 (]: Writing runtime sql for node "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:44:09.495526 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:44:09.497369 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "node_id": "model.mpesa_analytics.mart_daily_fraud_metrics"} */
+
+  
+    
+
+  create  table "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH raw_transactions AS (
+    -- 1. Extract the raw data from the operational table
+    SELECT * FROM public.processed_transactions
+),
+
+daily_aggregates AS (
+    -- 2. Transform the data into daily business metrics
+    SELECT 
+        DATE(created_at) AS report_date,
+        COUNT(txn_id) AS total_transactions,
+        SUM(amount) AS total_volume_kes,
+        
+        -- Business Logic: Isolate the fraud attempts
+        COUNT(CASE WHEN is_fraud = true THEN txn_id END) AS fraud_attempts,
+        SUM(CASE WHEN is_fraud = true THEN amount ELSE 0 END) AS amount_saved_by_ml_kes
+
+    FROM raw_transactions
+    GROUP BY 1
+)
+
+-- 3. Final Output with calculated ratios
+SELECT 
+    report_date,
+    total_transactions,
+    total_volume_kes,
+    fraud_attempts,
+    amount_saved_by_ml_kes,
+    ROUND((fraud_attempts::numeric / NULLIF(total_transactions, 0)) * 100, 2) AS fraud_attempt_rate_pct
+FROM daily_aggregates
+ORDER BY report_date DESC
+  );
+  
+[0m15:44:09.498691 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:44:09.598656 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.100 seconds
+[0m15:44:09.635609 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:44:09.639564 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "node_id": "model.mpesa_analytics.mart_daily_fraud_metrics"} */
+alter table "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics" rename to "mart_daily_fraud_metrics__dbt_backup"
+[0m15:44:09.647735 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m15:44:09.656990 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:44:09.659849 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "node_id": "model.mpesa_analytics.mart_daily_fraud_metrics"} */
+alter table "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_tmp" rename to "mart_daily_fraud_metrics"
+[0m15:44:09.668463 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m15:44:09.764836 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: COMMIT
+[0m15:44:09.766105 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:44:09.767174 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: COMMIT
+[0m15:44:09.772176 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m15:44:09.797705 [debug] [Thread-1 (]: Applying DROP to: "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_backup"
+[0m15:44:09.819674 [debug] [Thread-1 (]: Using postgres connection "model.mpesa_analytics.mart_daily_fraud_metrics"
+[0m15:44:09.821130 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mpesa_analytics", "target_name": "dev", "node_id": "model.mpesa_analytics.mart_daily_fraud_metrics"} */
+drop table if exists "mobile_money_profiles"."analytics_marts"."mart_daily_fraud_metrics__dbt_backup" cascade
+[0m15:44:09.861992 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.039 seconds
+[0m15:44:09.870608 [debug] [Thread-1 (]: On model.mpesa_analytics.mart_daily_fraud_metrics: Close
+[0m15:44:09.878397 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4868df9b-03ea-4898-9381-4a9cd560be84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D3A5DDF10>]}
+[0m15:44:09.880771 [info ] [Thread-1 (]: 1 of 1 OK created sql table model analytics_marts.mart_daily_fraud_metrics ..... [[32mSELECT 1[0m in 0.57s]
+[0m15:44:09.884059 [debug] [Thread-1 (]: Finished running node model.mpesa_analytics.mart_daily_fraud_metrics
+[0m15:44:09.888992 [debug] [MainThread]: On master: COMMIT
+[0m15:44:09.890658 [debug] [MainThread]: Using postgres connection "master"
+[0m15:44:09.891645 [debug] [MainThread]: On master: COMMIT
+[0m15:44:09.893244 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:44:09.977196 [debug] [MainThread]: SQL status: COMMIT in 0.084 seconds
+[0m15:44:09.978580 [debug] [MainThread]: On master: Close
+[0m15:44:09.980457 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:44:09.982007 [debug] [MainThread]: Connection 'list_mobile_money_profiles' was properly closed.
+[0m15:44:09.983390 [debug] [MainThread]: Connection 'list_mobile_money_profiles_analytics_marts' was properly closed.
+[0m15:44:09.984564 [debug] [MainThread]: Connection 'model.mpesa_analytics.mart_daily_fraud_metrics' was properly closed.
+[0m15:44:09.986205 [info ] [MainThread]: 
+[0m15:44:09.988125 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 2.62 seconds (2.62s).
+[0m15:44:09.991477 [debug] [MainThread]: Command end result
+[0m15:44:10.213928 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\manifest.json
+[0m15:44:10.235152 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\semantic_manifest.json
+[0m15:44:10.265523 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\Desktop\mobile money fraud engine\mpesa_analytics\target\run_results.json
+[0m15:44:10.266670 [info ] [MainThread]: 
+[0m15:44:10.268503 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:44:10.270181 [info ] [MainThread]: 
+[0m15:44:10.272449 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:44:10.282549 [debug] [MainThread]: Command `dbt run` succeeded at 15:44:10.281926 after 12.02 seconds
+[0m15:44:10.284733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D3A1AE8E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D3498E2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D39D12D50>]}
+[0m15:44:10.289340 [debug] [MainThread]: Flushing usage events
+[0m15:44:13.604249 [debug] [MainThread]: An error was encountered while trying to flush usage events
